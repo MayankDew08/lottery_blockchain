@@ -41,7 +41,7 @@ tests/                         # Tests
 - Anyone can call `get-tickets` and `get-winner` to view state.
 
 ## Deployment
-Deployed at address ST34D99C2XERASMYWCYJ04S9GP6QF9WK3GMTRDDK4
+Deployed at address ST34D99C2XERASMYWCYJ04S9GP6QF9WK3GMTRDDK4.lottery_blockchain
 
 ## License
 MIT
