@@ -1,0 +1,36 @@
+(define-data-var tickets (list 100 principal) [])
+(define-data-var ticket-price uint u1000000) ;; 1 STX
+(define-data-var owner principal tx-sender)
+(define-data-var winner (optional principal) none)
+
+(define-public (buy-ticket)
+    (let ((price (var-get ticket-price)))
+        (asserts! (>= (stx-get-balance tx-sender) price) (err u100))
+        (stx-transfer? price tx-sender (var-get owner))
+        (var-set tickets (cons tx-sender (var-get tickets)))
+        (ok true)
+    )
+)
+
+(define-public (draw-winner)
+    (begin
+        (asserts! (is-eq tx-sender (var-get owner)) (err u101))
+        (let ((ticket-list (var-get tickets)))
+            (asserts! (> (len ticket-list) 0) (err u102))
+            (let ((rand-index (mod (to-uint (block-height)) (len ticket-list))))
+                (let ((winner (element-at ticket-list rand-index)))
+                    (var-set winner (some winner))
+                    (ok winner)
+                )
+            )
+        )
+    )
+)
+
+(define-read-only (get-tickets)
+    (ok (var-get tickets))
+)
+
+(define-read-only (get-winner)
+    (ok (var-get winner))
+)
