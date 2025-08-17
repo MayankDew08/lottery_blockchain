@@ -42,7 +42,8 @@ tests/                         # Tests
 
 ## Deployment
 Deployed at address STB6Z9BTVPNCDJFHKZJR0WGYZ6H2319V1BGZYYBV.lottery
-![Uploading image.png…]()
+<img width="1915" height="904" alt="image" src="https://github.com/user-attachments/assets/b7190d32-ca01-4365-bb4e-3ab874581ba8" />
+
 
 
 ## License
