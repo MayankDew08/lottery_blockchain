@@ -1,0 +1,10 @@
+# Default Testnet Deployment Plan
+---
+id: 1
+name: Testnet deployment
+network: testnet
+stacks-node: "https://stacks-node-api.testnet.stacks.co"
+plan:
+  batches:
+    - contract: lottery
+      path: contracts/lottery.clar
