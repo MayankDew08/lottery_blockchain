@@ -41,7 +41,7 @@ tests/                         # Tests
 - Anyone can call `get-tickets` and `get-winner` to view state.
 
 ## Deployment
-Deployment plans are managed in `deployments/default.testnet-plan.yaml`.
+Deployed at address ST34D99C2XERASMYWCYJ04S9GP6QF9WK3GMTRDDK4
 
 ## License
 MIT
